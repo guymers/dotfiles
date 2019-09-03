@@ -2,10 +2,10 @@
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
-    <screen_edge_strength>20</screen_edge_strength>
+    <screen_edge_strength>25</screen_edge_strength>
   </resistance>
   <focus>
-    <focusNew>no</focusNew>
+    <focusNew>yes</focusNew>
     <followMouse>no</followMouse>
     <focusLast>yes</focusLast>
     <underMouse>no</underMouse>
@@ -68,18 +68,12 @@
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
-    <popupShow>Nonpixel</popupShow>
-    <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
-    <popupPosition>Center</popupPosition>
-    <!-- 'Center', 'Top', or 'Fixed' -->
+    <popupShow>Nonpixel</popupShow> <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
+    <popupPosition>Center</popupPosition> <!-- 'Center', 'Top', or 'Fixed' -->
     <popupFixedPosition>
       <!-- these are used if popupPosition is set to 'Fixed' -->
-      <x>10</x>
-      <!-- positive number for distance from left edge, negative number for
-         distance from right edge, or 'Center' -->
-      <y>10</y>
-      <!-- positive number for distance from top edge, negative number for
-         distance from bottom edge, or 'Center' -->
+      <x>10</x> <!-- positive number for distance from left edge, negative number for distance from right edge, or 'Center' -->
+      <y>10</y> <!-- positive number for distance from top edge, negative number for distance from bottom edge, or 'Center' -->
     </popupFixedPosition>
   </resize>
   <!-- You can reserve a portion of your screen where windows will not cover when
@@ -188,6 +182,38 @@
         <menu>client-list-combined-menu</menu>
       </action>
     </keybind>
+    <!-- Keybindings for brightness -->
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -10</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight +10</command>
+      </action>
+    </keybind>
+    <keybind key="XF86Display">
+      <action name="Execute">
+        <command>autorandr --change</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for audio -->
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>pactl set-sink-mute @DEFAULT_SINK@ toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>pactl set-sink-volume @DEFAULT_SINK@ -5%</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>pactl set-sink-volume @DEFAULT_SINK@ +5%</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -195,8 +221,17 @@
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
     <context name="Frame">
+      <mousebind button="A-Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
       <mousebind button="A-Left" action="Drag">
         <action name="Move"/>
+      </mousebind>
+      <mousebind button="A-Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
       </mousebind>
       <mousebind button="A-Right" action="Drag">
         <action name="Resize"/>

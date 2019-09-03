@@ -25,7 +25,7 @@ URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.clipboard.autocopy: true
 
-xscreensaver.timeout: 0:05:00
+xscreensaver.timeout: 0:10:00
 xscreensaver.cycle: 0:00:00
 xscreensaver.lock: true
 xscreensaver.lockTimeout: 0:00:30

@@ -8,3 +8,5 @@
 	sort = -version:refname
 [http]
 	cookiefile = ~/.gitcookies
+[advice]
+	detachedHead = false

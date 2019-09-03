@@ -5,7 +5,7 @@
   <menu id="apps-editors-menu" label="Editors">
     <item label="IntelliJ">
       <action name="Execute">
-        <command>idea</command>
+        <command>/opt/intellij-idea-ultimate-edition/bin/idea.sh</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
@@ -16,7 +16,7 @@
   <menu id="apps-net-menu" label="Internet">
     <item label="Firefox">
       <action name="Execute">
-        <command>apulse firefox</command>
+        <command>firefox</command>
         <startupnotify>
           <enabled>yes</enabled>
           <wmclass>Firefox</wmclass>
@@ -74,6 +74,14 @@
     <item label="GTK Theme Manager">
       <action name="Execute">
         <command>lxappearance</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="PulseAudio">
+      <action name="Execute">
+        <command>pavucontrol</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

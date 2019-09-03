@@ -1,0 +1,35 @@
+#!/bin/bash
+set -e
+
+readonly dest="$HOME"
+
+files=(
+.bash_aliases
+.bashrc
+.gitconfig
+'.gtkrc-2.0'
+.ideavimrc
+.inputrc
+open_terms.sh
+.vimrc
+.Xdefaults
+.xinitrc
+.Xmodmap
+.Xresources
+)
+for f in "${files[@]}"; do
+	ln -s ".dotfiles/$f" "$dest/$f"
+done
+
+config_files=(
+chrome-flags.conf
+chromium-flags.conf
+fontconfig
+git
+openbox
+redshift
+trizen
+)
+for f in "${config_files[@]}"; do
+	ln -s "../.dotfiles/config/$f" "$dest/.config/$f"
+done

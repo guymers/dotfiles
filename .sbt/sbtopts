@@ -1,2 +1,2 @@
--J-Dsbt.supershell-false
--J-Dsbt.banner-false
+-J-Dsbt.supershell=false
+-J-Dsbt.banner=false
