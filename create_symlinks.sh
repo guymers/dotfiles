@@ -26,6 +26,7 @@ chrome-flags.conf
 chromium-flags.conf
 fontconfig
 git
+gtk-3.0
 openbox
 redshift
 trizen
@@ -33,3 +34,8 @@ trizen
 for f in "${config_files[@]}"; do
 	ln -s "../.dotfiles/config/$f" "$dest/.config/$f"
 done
+
+mkdir "$dest/.config/systemd"
+ln -s "../.dotfiles/config/systemd/user" "$dest/.config/systemd/"
+systemctl --user enable thunar
+systemctl --user enable xscreensaver

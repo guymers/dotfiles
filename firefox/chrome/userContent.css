@@ -1,0 +1,9 @@
+@font-face { font-family: 'helvetica'; src: local('sans-serif'); }
+@font-face { font-family: 'Helvetica'; src: local('sans-serif'); }
+
+@-moz-document domain(mail.google.com) {
+  body, td, div, span, a, h1, h2, h3 {
+    font-family: sans-serif !important;
+    letter-spacing: normal !important;
+  }
+}
