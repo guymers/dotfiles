@@ -1,16 +1,16 @@
-Xft.dpi: 112
+Xft.dpi: 96
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
 Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintslight
 Xft.rgba: rgb
+
+*saveLines: 5000
 
 XTerm*faceName: monospace
 XTerm*faceSize: 9
 XTerm*selectToClipboard: true
-
-*saveLines: 5000
 
 URxvt*font: xft:monospace:size=9
 URxvt*letterSpace: -1

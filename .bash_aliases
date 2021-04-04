@@ -1,7 +1,4 @@
 alias ls='ls --color=auto'
-alias la='ls -al --color=auto'
-
-alias startx='ssh-agent startx'
 
 alias battery='acpi'
 alias lock='xscreensaver-command --lock'
