@@ -44,4 +44,10 @@ export HISTTIMEFORMAT='%F %T | '
 # iso ls timestamps
 export TIME_STYLE=long-iso
 
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+
 source .bash_custom

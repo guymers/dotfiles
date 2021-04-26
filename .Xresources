@@ -1,18 +1,17 @@
-Xft.dpi: 96
-Xft.autohint: 0
+Xft.autohint: false
 Xft.lcdfilter: lcddefault
-Xft.antialias: 1
-Xft.hinting: 1
+Xft.antialias: true
+Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
 
 *saveLines: 5000
 
-XTerm*faceName: monospace
-XTerm*faceSize: 9
+XTerm*faceName: Ubuntu Mono
+XTerm*faceSize: 12
 XTerm*selectToClipboard: true
 
-URxvt*font: xft:monospace:size=9
+URxvt*font: xft:Ubuntu Mono:size=12
 URxvt*letterSpace: -1
 URxvt*scrollBar: false
 URxvt*scrollTtyOutput: false
@@ -24,19 +23,6 @@ URxvt*perl-ext-common: clipboard
 URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.clipboard.autocopy: true
-
-xscreensaver.timeout: 0:10:00
-xscreensaver.cycle: 0:00:00
-xscreensaver.lock: true
-xscreensaver.lockTimeout: 0:00:30
-xscreensaver.mode: blank
-xscreensaver.dpmsEnabled: true
-xscreensaver.dpmsStandby: 0:10:00
-xscreensaver.dpmsSuspend: 2:00:00
-xscreensaver.dpmsOff: 4:00:00
-xscreensaver.dpmsQuickOff: true
-xscreensaver.splash: false
-xscreensaver.fade: false
 
 !obsidian
 *background: #293134

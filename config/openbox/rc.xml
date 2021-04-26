@@ -25,37 +25,37 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Ubuntu Medium</name>
-      <size>9</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
       <name>Ubuntu</name>
-      <size>9</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
       <name>Ubuntu</name>
-      <size>9</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
       <name>Ubuntu</name>
-      <size>9</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>Ubuntu Medium</name>
-      <size>9</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Ubuntu Medium</name>
-      <size>9</size>
+      <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>

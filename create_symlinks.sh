@@ -11,11 +11,13 @@ files=(
 .ideavimrc
 .inputrc
 open_terms.sh
+startx.sh
 .vimrc
 .Xdefaults
 .xinitrc
 .Xmodmap
 .Xresources
+.xscreensaver
 )
 for f in "${files[@]}"; do
 	ln -s ".dotfiles/$f" "$dest/$f"

@@ -27,6 +27,9 @@ endif
 set undofile
 set undodir=~/.vim/undodir
 
+" move .viminfo out of $HOME
+set viminfo+=n~/.vim/viminfo
+
 " tab sizes
 set tabstop=2
 set shiftwidth=2
