@@ -5,7 +5,7 @@
   <menu id="apps-editors-menu" label="Editors">
     <item label="IntelliJ">
       <action name="Execute">
-        <command>/opt/intellij-idea-ultimate-edition/bin/idea.sh</command>
+        <command>intellij-idea-ultimate-edition</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
