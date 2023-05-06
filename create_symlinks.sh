@@ -1,43 +1,49 @@
 #!/bin/bash
 set -e
 
-readonly dest="$HOME"
+if ! [[ "$HOME/.config/.dotfiles" -ef "$PWD" ]]; then
+	echo "must be in .config/.dotfiles directory" 1>&2
+	exit 1
+fi
+
+cd "$HOME"
 
 files=(
 .bash_aliases
 .bashrc
-.gitconfig
-'.gtkrc-2.0'
-.ideavimrc
-.inputrc
-open_terms.sh
 startx.sh
 .vimrc
 .Xdefaults
 .xinitrc
 .Xmodmap
 .Xresources
-.xscreensaver
 )
 for f in "${files[@]}"; do
-	ln -s ".dotfiles/$f" "$dest/$f"
+	ln -s ".config/.dotfiles/$f"
 done
 
+ln -s ".config/.dotfiles/config/gtk-2.0/gtkrc" ".gtkrc-2.0"
+
+cd "$HOME/.config"
+
 config_files=(
-chrome-flags.conf
 chromium-flags.conf
 fontconfig
 git
 gtk-3.0
+ideavim
 openbox
+paru
+postgresql
+readline
 redshift
 trizen
 )
 for f in "${config_files[@]}"; do
-	ln -s "../.dotfiles/config/$f" "$dest/.config/$f"
+	ln -s ".dotfiles/config/$f"
 done
 
-mkdir "$dest/.config/systemd"
-ln -s "../.dotfiles/config/systemd/user" "$dest/.config/systemd/"
+mkdir "systemd"
+ln -s ".dotfiles/config/systemd/user" "systemd"
+
 systemctl --user enable thunar
-systemctl --user enable xscreensaver

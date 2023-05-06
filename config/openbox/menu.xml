@@ -54,7 +54,23 @@
   <menu id="apps-multimedia-menu" label="Multimedia">
     <item label="Music">
       <action name="Execute">
-        <command>gmpc</command>
+        <command>quodlibet</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Steam">
+      <action name="Execute">
+        <command>com.valvesoftware.Steam</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Lutris">
+      <action name="Execute">
+        <command>net.lutris.Lutris</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>

@@ -1,7 +1,7 @@
 alias ls='ls --color=auto'
 
 alias battery='acpi'
-alias lock='xscreensaver-command --lock'
+alias lock='loginctl lock-session'
 
 alias pacup='sudo pacman -Syu'
 alias pacremove='sudo pacman -Rnus'

@@ -1,9 +1,0 @@
-[Unit]
-Description=xscreensaver
-PartOf=graphical-session.target
-
-[Service]
-ExecStart=/usr/bin/xscreensaver -no-splash
-
-[Install]
-WantedBy=xsession.target

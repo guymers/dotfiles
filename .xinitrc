@@ -20,4 +20,10 @@ setxkbmap -option caps:escape
 
 systemctl --user --no-block start xsession.target
 
+# locking after inactivity
+xset s on
+xset s 600
+xss-lock -l -- sxlock -l -u _ &
+
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec openbox

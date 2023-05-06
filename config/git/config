@@ -1,0 +1,14 @@
+[push]
+  default = simple
+[diff]
+  compactionHeuristic = true
+[tag]
+  sort = -version:refname
+[advice]
+  detachedHead = false
+[init]
+  defaultBranch = master
+[rebase]
+  updateRefs = true
+[include]
+  path = ~/.config/local_gitconfig
