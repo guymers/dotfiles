@@ -1,34 +1,17 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'derekwyatt/vim-scala'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'nicholaides/words-to-avoid.vim'
-
-call vundle#end()
-filetype plugin indent on
+set mouse-=a
 
 " infinite undo
-if !isdirectory($HOME . "/.vim/undodir")
-  call mkdir($HOME . "/.vim/undodir", "p")
+if !isdirectory($HOME . "/.local/state/vim/undodir")
+  call mkdir($HOME . "/.local/state/vim/undodir", "p")
 endif
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.local/state/vim/undodir
 
 " move .viminfo out of $HOME
-set viminfo+=n~/.vim/viminfo
+set viminfo+=n~/.config/vim/info
 
 " tab sizes
 set tabstop=2
@@ -43,6 +26,9 @@ autocmd Filetype yml setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype scala setlocal ts=2 sw=2 sts=2 expandtab
 
+set list
+set lcs=tab:>-,lead:·
+
 " line numbers
 set number
 set ruler
@@ -53,7 +39,10 @@ set ignorecase
 set hlsearch
 
 " create swp files in tmp
-set directory=/tmp//
+if !isdirectory($HOME . "/.local/state/vim/swp")
+  call mkdir($HOME . "/.local/state/vim/swp", "p")
+endif
+set directory=~/.local/state/vim/swp
 
 " show matching brackets
 set showmatch
@@ -61,8 +50,6 @@ set showmatch
 " no error bells
 set noerrorbells
 set visualbell
-
-set nocompatible
 
 " remove trailing whitespace
 "autocmd BufWritePre * :%s/\s\+$//e

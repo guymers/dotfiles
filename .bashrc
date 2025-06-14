@@ -49,14 +49,20 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
+export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
+export GRADLE_USER_HOME="$XDG_CONFIG_HOME/gradle"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export KUBECACHEDIR="$XDG_CACHE_HOME/kube"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/config"
-export PSQL_HISTORY="$XDG_STATE_HOME/postgresql/history "
+export PACKER_CACHE_DIR="$XDG_CACHE_HOME/packer"
+export PACKER_CONFIG_DIR="$XDG_STATE_HOME/packer"
+export PSQL_HISTORY="$XDG_STATE_HOME/postgresql/history"
 export PSQLRC="$XDG_CONFIG_HOME/postgresql/psqlrc"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
+export VAGRANT_HOME="$XDG_CACHE_HOME/vagrant"
 
 source .bash_custom

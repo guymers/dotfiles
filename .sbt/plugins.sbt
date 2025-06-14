@@ -1,2 +1,0 @@
-//addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.6.3")
-//addSbtPlugin("com.github.cb372" % "sbt-explicit-dependencies" % "0.2.16")

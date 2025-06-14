@@ -1,0 +1,17 @@
+# ------------------------------------------------ #
+#  The SBT Configuration file.                     #
+# ------------------------------------------------ #
+-mem 5000
+
+-J-Dsbt.banner=false
+-J-Dsbt.supershell=false
+-J-Divy.home=$HOME/.cache/ivy2
+-J-Dsbt.ivy.home=$HOME/.cache/ivy2
+
+-J-XX:+UseG1GC
+-J-XX:+UnlockExperimentalVMOptions
+-J-XX:+UseCompactObjectHeaders
+-J--enable-native-access=ALL-UNNAMED
+-J--sun-misc-unsafe-memory-access=allow
+
+#-Dsbt.task.timings=true

@@ -68,6 +68,14 @@
         </startupnotify>
       </action>
     </item>
+    <item label="Bottles">
+      <action name="Execute">
+        <command>com.usebottles.bottles</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
   </menu>
 
   <menu id="system-menu" label="System">
@@ -103,7 +111,7 @@
   <menu id="root-menu" label="Openbox 3">
     <item label="Term">
       <action name="Execute">
-        <command>urxvt</command>
+        <command>foot</command>
       </action>
     </item>
     <item label="Computer">

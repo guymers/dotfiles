@@ -29,15 +29,16 @@ cd "$HOME/.config"
 config_files=(
 chromium-flags.conf
 fontconfig
+foot
 git
 gtk-3.0
 ideavim
+labwc
 openbox
 paru
 postgresql
 readline
 redshift
-trizen
 )
 for f in "${config_files[@]}"; do
 	ln -s ".dotfiles/config/$f"
